@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 65px;
+  background-color: #171c24;
+}
+.navbar .logo h1 {
+  font-size: 2.1rem;
+  cursor: pointer;
+}
+.nav-item ul {
+  display: flex;
+}
+.nav-item ul li {
+  position: relative;
+  list-style: none;
+}
+.nav-item ul li:hover > a {
+  color: crimson;
+}
+.ico:hover {
+  color: crimson;
+}
+.icoo-2 {
+  position: relative;
+  top: 3px;
+  left: 40px;
+}
+.nav-item ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: 0.3s;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.icoo {
+  font-size: 22px;
+}
+.ico {
+  font-size: 20px;
+  position: absolute;
+  right: 4px;
+  top: 12px;
+}
+.dicon {
+  font-size: 20px;
+  position: absolute;
+  top: 12px;
+  margin-left: 5px;
+}
+
+.submenu-1 {
+  position: absolute;
+  top: 30px;
+  width: 190px;
+  height: 272px;
+  background: #171c24;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.submenu-2 {
+  position: absolute;
+  background: #171c24;
+  width: 220px;
+  height: 240px;
+  top: 0;
+  flex-direction: column;
+  left: 120px;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+.submenu-3 {
+  left: 0px;
+  position: absolute;
+  top: 30px;
+  width: 190px;
+  height: 230px;
+  background: #171c24;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.navbar ul li:hover > .submenu-1 {
+  opacity: 1;
+  visibility: visible;
+  top: 48px;
+}
+.nav-item ul li:hover > .submenu-2 {
+  opacity: 1;
+  visibility: visible;
+  left: 190px;
+}
+.nav-item ul li:hover > .submenu-3 {
+  opacity: 1;
+  visibility: visible;
+  top: 50px;
+}
+.aa {
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+}
+
+@media screen and (max-width: 855px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-item {
+    position: absolute;
+    top: 61px;
+    height: 90vh;
+    background-color: #171c24;
+    display: flex;
+    width: 50%;
+    right: -885px;
+    transition: 0.5s;
+  }
+  .nav-item ul {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #171c24;
+  }
+  .burger {
+    display: block;
+  }
+  .burger-active {
+    right: 0px;
+  }
+  .fa-times {
+    right: 0px;
+  }
+  .ico {
+    font-size: 20px;
+    position: absolute;
+    left: 133px;
+  }
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #fff;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+  .ham8 .top {
+    stroke-dasharray: 40 160;
+  }
+  .ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+  }
+  .ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+  }
+  .ham8.active .top {
+    stroke-dashoffset: -64px;
+  }
+  .ham8.active .middle {
+    transform: rotate(90deg);
+  }
+  .ham8.active .bottom {
+    stroke-dashoffset: -64px;
+  }
+  .submenu-1 {
+    display: none !important;
+    position: static;
+  }
+  .submenu-2 {
+    display: none !important;
+    position: static;
+  }
+  .submenu-3 {
+    display: none !important;
+    position: static;
+  }
+  .nav-item ul li:hover > .submenu-1 {
+    display: block !important;
+    height: 109%;
+  }
+  .nav-item ul li:hover > .submenu-2 {
+    display: block !important;
+  }
+  .nav-item ul li:hover > .submenu-3 {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .nav-item {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .nav-item {
+    width: 43%;
+  }
+}
