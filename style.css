@@ -130,15 +130,19 @@ body {
   body {
     overflow-x: hidden;
   }
+  .navbar{
+    height: 10.1vh;
+  }
   .nav-item {
     position: absolute;
-    top: 61px;
+    top: 10vh;
     height: 90vh;
+    line-height: 30px;
     background-color: #171c24;
     display: flex;
     width: 50%;
-    right: -885px;
-    transition: 0.5s;
+    right: 0px;
+    display: none;
   }
   .nav-item ul {
     flex-direction: column;
@@ -151,6 +155,7 @@ body {
   }
   .burger-active {
     right: 0px;
+    display: block;
   }
   .fa-times {
     right: 0px;
